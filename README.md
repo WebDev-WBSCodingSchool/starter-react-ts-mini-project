@@ -4,24 +4,21 @@ Two days (full time) / five days (part time). Solo project, mandatory
 presentation at the end.
 
 This repo is your starting point. **Fork it once** and work in your fork. Every
-change still reaches `main` through a Pull Request. Working alone that can feel
-like paperwork, and it is still the habit worth having, because the PR is where you
-read your own work back before it lands.
+change merges to `main` through a Pull Request.
 
 ## Where you are
 
-Four stages. Each one says what ends it, because that is the part nobody can see
-from inside it.
+Four stages. Each stage names what ends it, which is the part easy to lose sight
+of from the inside.
 
-1. **Fork it, clone it, run `/onboard`.** It checks your setup and puts two
-   questions to you, which are in "Before you write code" below. Ends when
-   everything it checks comes back green.
-2. **Pick a task, cut a branch.** `git switch -c <task-id>-<short-name>`. Ends when
-   you have somewhere to put the work that is not `main`.
-3. **Write it, commit it, explain it.** Ends when the sign-off records. It tells
-   you what just opened up.
-4. **Open a Pull Request.** Ends when it is merged. Then back to 2 with the next
-   task.
+1. **Fork it, clone it, run `/onboard`.** Ends when the setup checks pass and you
+   have answered the two questions in "Before you write code" below.
+2. **Pick a task, cut a branch.** `git switch -c <task-id>-<short-name>`. Ends
+   when you have a branch for the work instead of committing to `main`.
+3. **Write it, commit it, explain it.** Ends when the sign-off is recorded. It
+   tells you what just opened up.
+4. **Open a Pull Request.** Ends when it is merged. Then return to stage 2 with
+   the next task.
 
 ## The requirements
 
@@ -40,8 +37,8 @@ from inside it.
 | FR011 | Delete an artwork, and its note with it. |
 | **FR012** | Types threaded through components and state, taken from the schemas rather than written a second time. |
 
-**Bold = you type this one yourself.** The others the agent can write with you from
-day one.
+**Bold = you type this one yourself.** For the others, you may ask the agent to
+help you implement them.
 
 ## The setup
 
@@ -67,7 +64,7 @@ their docs at <https://api.artic.edu/docs/> before you write your first URL,
 particularly the part about which fields come back by default and which you have to
 ask for.
 
-## What you type, and what the agent types
+## What you type, and where the agent can help
 
 Two topics, and they are why this module exists: **typing a React app** and
 **runtime validation**. Every type annotation in this project is yours: the props a
@@ -82,7 +79,7 @@ it afterwards. That is an odd way to write TypeScript and it is deliberate: the
 annotation is the part that is hard to get right, and it is the part you will be
 asked about in the presentation.
 
-**Everything else the agent can write, from day one:**
+**Everything else you may ask the agent to help implement:**
 
 - All JSX and all styling: the search form, the card markup, the gallery layout,
   the CSS.
@@ -94,13 +91,13 @@ asked about in the presentation.
   you wrote is throwing.
 
 **The agent waits to be asked.** It will not start building because a file is empty
-or because you have written down what you plan to do. None of this is a to-do list
-it works through on its own. Ask it for what you want, and expect it to ask you
-back when there is something to decide.
+or because your plan is finished. None of this is a to-do list it works through on
+its own. Ask it for what you want. Before every code edit, it asks at least one
+question about your requested change and waits for your answer.
 
 Yes, this tells you exactly what you could paste into a browser chat instead. You
-are being told the rule rather than fenced in by it, because a rule you can read is
-one you can decide to keep.
+are given the rule directly rather than fenced in by it. A rule you can read is
+one you can choose to follow.
 
 ## Write it, commit it, explain it
 
@@ -177,24 +174,25 @@ did at home end up in two separate records, and neither counts for the other.
 **If you want the agent to talk differently**, with simpler language, shorter
 answers, or more or less detail, say so, and ask it to save that as a personal
 skill in `~/.claude/skills/`. It travels with you to the next project, so you only
-have to ask once. It changes how the agent talks, not what it may write.
+have to ask once. It changes how the agent talks, not which code you must write
+yourself.
 
 Inline suggestions (Copilot-style ghost text) are turned off for this folder in
-`.vscode/settings.json`. That file is read-only, and the agent cannot write to it
-at all. Otherwise it could hand ghost text back in a single edit, and ghost text is
-the one form of help that arrives without being asked for.
+`.vscode/settings.json`. That file is read-only, and the agent cannot write to it.
+Otherwise it could restore ghost text in a single edit, and ghost text is the one
+form of help that arrives without being asked.
 
 **This file is read-only too**, along with `CLAUDE.md`. This page is the
-requirements: it is what the agent reads to work out what it may write for you and
-what it may only talk you through, so it is not a page the agent gets to reword.
-Your own writing about your project goes in files you make: your notes, your
-Issues, anything else you want.
+requirements: it tells the agent which code you must write and where it may help
+after you ask, so it is not a page the agent gets to reword. Your own writing
+about your project goes in files you make, whether that is your notes, your
+Issues, or anything else you want.
 
 If you think a requirement is wrong or unclear, say so to your instructor. That is
 a conversation, not a diff.
 
 None of these locks is a cage, and you should know that up front. Read-only here
-means VS Code refuses the keystroke, there is a setting that turns that off, and
-there are other editors. What none of it can do is happen quietly. Every file named
-above is committed, so however you go about changing one, it lands in your PR with
-your name on it. That is the whole mechanism: not "you can't", but "it's visible".
+means VS Code rejects typing in those buffers, there is a setting to change that,
+and you can use other editors. But none of it can happen quietly. Every file
+named above is committed, so any change lands in your PR with your name on it.
+That is the mechanism: not "you cannot", but "it is visible".
